@@ -19,7 +19,7 @@ pipeline {
         sh 'ls -ltr'
         // build the project and create a JAR file
         sh 'cd client && npm cache clean --force && CI=true npm install --verbose'
-      }
-    }
-  }
+     }
+    }
+ }
 }
