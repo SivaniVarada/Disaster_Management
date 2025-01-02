@@ -12,7 +12,6 @@ pipeline {
         // build the project and create a JAR file
         sh 'cd server && rm -rf node_modules'
         sh 'cd server && npm install'
-        sh 'cd server && npm start'
       }
     }
     stage('Build and Test(frontend)') {
@@ -20,7 +19,6 @@ pipeline {
         sh 'ls -ltr'
         // build the project and create a JAR file
         sh 'cd client && npm i'
-        sh 'cd client && npm start'
       }
     }
   }
