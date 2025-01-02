@@ -18,9 +18,8 @@ pipeline {
       steps {
         sh 'ls -ltr'
         // build the project and create a JAR file
-        sh 'cd client && rm -rf node_modules'
-        sh 'cd client && npm i'
-      }
-    }
-  }
+        sh 'cd client && npm cache clean --force && CI=true npm install --verbose'
+      }
+    }
+  }
 }
