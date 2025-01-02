@@ -18,6 +18,7 @@ pipeline {
       steps {
         sh 'ls -ltr'
         // build the project and create a JAR file
+        sh 'cd client && rm -rf node_modules'
         sh 'cd client && npm i'
       }
     }
